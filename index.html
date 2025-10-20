@@ -1,14 +1,134 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
 <head>
-	<title>Sistemas de Informação</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seu Nome — Site Pessoal</title>
+  <meta name="description" content="Site pessoal — sobre mim, portfólio e contato." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<hr>
-	<h1>Página Inicial</h1>
-		<a href="https://www.instagram.com/jeffersonteles314/"><h3>Instagram</h3></a> 
-		<a href="https://twitter.com/Jeffersontels"><h3>Twitter</h3></a> 
-		<a href="https://github.com/JeffersonTeles314"><h3>Github</h3></a> 
-		<a href="Tabela.html"><h3>perae</h3></a> 
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SN</div>
+        <div>
+          <div style="font-weight:700">Seu Nome</div>
+          <div class="muted" style="font-size:13px">Desenvolvedor · Pesquisador · Criativo</div>
+        </div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <a class="nav-link" href="#about">Sobre</a>
+        <a class="nav-link" href="#portfolio">Portfólio</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="card intro">
+          <h1>Olá — eu sou <span class="accent">Seu Nome</span></h1>
+          <p>Sou desenvolvedor web e pesquisador com interesse em geociências, modelagem e visualizações interativas. Gosto de transformar dados complexos em interfaces claras e úteis.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">Geociências</span>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="#contact">Entrar em contato</a>
+            <a class="btn secondary" href="#portfolio">Ver portfólio</a>
+          </div>
+
+          <section id="about">
+            <h3>Sobre mim</h3>
+            <p class="muted">Breve parágrafo sobre sua formação, interesses e experiência. Exemplos: mestrado em Geofísica, experiência com inversão geoelétrica, criação de visualizações científicas.</p>
+          </section>
+
+          <section id="skills">
+            <h3>Habilidades</h3>
+            <div class="skills">
+              <div class="tag">Modelagem numérica</div>
+              <div class="tag">Inversão Geoelétrica</div>
+              <div class="tag">Python / Jupyter</div>
+              <div class="tag">Visualização de dados</div>
+              <div class="tag">Design responsivo</div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar">
+            <!-- Substitua por sua foto -->
+            <svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="svg-avatar">
+              <g fill="#041025" transform="translate(30,30)">
+                <rect width="140" height="140" rx="14"/>
+                <g transform="translate(20,22)" fill="#7dd3fc">
+                  <circle cx="50" cy="30" r="22"/>
+                  <rect x="10" y="64" width="80" height="30" rx="8" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="name">Seu Nome</div>
+          <div class="role">Desenvolvedor & Pesquisador</div>
+          <div class="location">Baseado em: Sua Cidade — Disponível para projetos</div>
+          <div class="buttons">
+            <a class="btn" href="#contact">Contratar</a>
+            <a class="btn secondary" href="#" onclick="event.preventDefault();alert('Substitua este link pelo seu currículo');">Currículo</a>
+          </div>
+        </aside>
+      </div>
+
+      <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="grid-3">
+          <article class="project card">
+            <h4>Projeto 1 — Inversão Geoelétrica 2D</h4>
+            <p class="muted">Descrição curta do projeto, objetivos, e resultados. Links para repositório ou paper.</p>
+            <div><a href="#">Ver mais →</a></div>
+          </article>
+
+          <article class="project card">
+            <h4>Projeto 2 — Visualização interativa</h4>
+            <p class="muted">Dashboard para explorar dados geofísicos com filtros e gráficos interativos.</p>
+            <div><a href="#">Ver mais →</a></div>
+          </article>
+
+          <article class="project card">
+            <h4>Projeto 3 — Ferramenta em Python</h4>
+            <p class="muted">Biblioteca/Script para processamento de dados e automação de tarefas.</p>
+            <div><a href="#">Ver mais →</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>Contato</h3>
+        <p class="muted">Tem um projeto ou pergunta? Envie uma mensagem.</p>
+        <form action="/" method="post" onsubmit="event.preventDefault();alert('Este formulário é demonstrativo — configure um endpoint ou email.');">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="seu@exemplo.com" required>
+          <textarea name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+          <button class="btn" type="submit">Enviar mensagem</button>
+        </form>
+      </section>
+
+      <footer>
+        <div>© <span id="ano"></span> Seu Nome — Criado com ❤️</div>
+        <div class="muted">Links: <a href="#">LinkedIn</a> • <a href="#">GitHub</a> • <a href="#">Lattes</a></div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
